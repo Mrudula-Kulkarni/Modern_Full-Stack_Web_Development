@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    .emp-card {
+      max-width: 420px;
+      background-color: #e9e9e9;
+      padding: 22px;
+      border: 2px solid #ff6a4d;
+    }
+
+    label {
+      font-weight: bold;
+    }
+  </style>
+
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Employee Management System</h1>
+
+  <form id="empForm" class="emp-card">
+    <div class="mb-3">
+      <label for="id" class="form-label">8-Digit Employee ID</label>
+      <input type="text" class="form-control" id="id" name="id" maxlength="8" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="ext" class="form-label">4-Digit Extension</label>
+      <input type="text" class="form-control" id="ext" name="ext" maxlength="4" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="mb-4">
+      <label for="department" class="form-label">Department</label>
+      <select class="form-select" id="department" name="department" required>
+        <option value="Administrative">Administrative</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Executive">Executive</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Quality Assurance">Quality Assurance</option>
+        <option value="Sales">Sales</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+</body>
+</html>
