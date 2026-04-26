@@ -3,7 +3,7 @@ let emp2 = 'Bob Jones';
 let emp3 = 'Carol White';
 let emp4 = 'David Brown';
 let emp5 = 'Eva Green';
-let emp6 = 'Frank Black';
+let emp6 = 'Mrudula Kulkarni';
 
 const element = (
     <ul style={{'color': 'blue', 'fontSize': '24px'}}>
