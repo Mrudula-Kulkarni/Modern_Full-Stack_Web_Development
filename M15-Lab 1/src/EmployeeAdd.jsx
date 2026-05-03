@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 export default class EmployeeAdd extends React.Component {
     constructor() {
@@ -10,6 +9,10 @@ export default class EmployeeAdd extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const form = document.forms.employeeAdd;
+        if (!form.employeeName.value.trim() || !form.extension.value.trim() || !form.email.value.trim() || !form.title.value.trim()) {
+            alert('Please fill in all fields before adding an employee.');
+            return;
+        }
         const employee = {
             name: form.employeeName.value,
             extension: form.extension.value,
@@ -33,7 +36,7 @@ export default class EmployeeAdd extends React.Component {
                     <input type="text" name="extension" placeholder="Extension" style={{ marginRight: '10px' }} />
                     <input type="text" name="email" placeholder="Email" style={{ marginRight: '10px' }} />
                     <input type="text" name="title" placeholder="Title" style={{ marginRight: '10px' }} />
-                    <Button variant="primary" type="submit">Add</Button>
+                    <button className="btn btn-primary" type="submit">Add</button>
                 </form>
             </div>
         );

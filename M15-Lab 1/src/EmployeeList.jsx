@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table, Button, Badge } from 'react-bootstrap';
 import EmployeeFilter from './EmployeeFilter.jsx';
 import EmployeeAdd from './EmployeeAdd.jsx';
 
@@ -14,9 +13,7 @@ function EmployeeRow(props) {
             <td>{employee.dateAdded}</td>
             <td>{employee.currentlyEmployed ? 'Yes' : 'No'}</td>
             <td>
-                <Button variant="danger" size="sm" onClick={() => props.deleteEmployee(employee.id)}>
-                    X
-                </Button>
+                <button className="btn btn-danger btn-sm" onClick={() => props.deleteEmployee(employee.id)}>X</button>
             </td>
         </tr>
     );
@@ -27,7 +24,7 @@ function EmployeeTable(props) {
         <EmployeeRow key={employee.id} employee={employee} deleteEmployee={props.deleteEmployee} />
     );
     return (
-        <Table bordered>
+        <table className="table table-bordered">
             <thead className="table-dark">
                 <tr>
                     <th>Name</th>
@@ -42,7 +39,7 @@ function EmployeeTable(props) {
             <tbody>
                 {employeeRows}
             </tbody>
-        </Table>
+        </table>
     );
 }
 
@@ -81,7 +78,7 @@ export default class EmployeeList extends React.Component {
     render() {
         return (
             <div style={{ margin: '20px 40px' }}>
-                <h2>Employees <Badge bg="secondary">{this.state.employees.length}</Badge></h2>
+                <h2>Employees <span className="badge bg-secondary">{this.state.employees.length}</span></h2>
                 <EmployeeFilter />
                 <EmployeeTable employees={this.state.employees} deleteEmployee={this.deleteEmployee} />
                 <EmployeeAdd createEmployee={this.createEmployee} />
