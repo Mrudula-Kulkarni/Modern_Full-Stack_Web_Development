@@ -1,0 +1,24 @@
+{
+  "name": "m15-lab1",
+  "version": "1.0.0",
+  "description": "Employee Tracker with Webpack",
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^9.2.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
